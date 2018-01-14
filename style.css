@@ -1,0 +1,42 @@
+body, html { padding: 0; margin: 0;}
+
+* { text-align: center;}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+header {
+    font-size: xx-large;
+}
+
+.display {
+    min-width: 100px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: x-large;
+    background-color: rgba(55, 95, 55, 0.959);
+}
+
+
+#app {
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+#numpad {
+    background-color: gray;
+    padding: 1em;
+    border: 3px black ridge;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.numeral {
+    font-size: x-large;
+    padding: 0.5em;
+}
+

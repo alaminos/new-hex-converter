@@ -4,23 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hexagesimal Converter</title>
+    <title>New Hex Numerals</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>HEXAGESIMAL CONVERTER</header>
+    <header>NEW HEX NUMERALS</header>
     
     <main>
+        <H1>Decimal/Hexadecimal Converters</H1>
         <div id="app">
-            <button onclick="()">10>16</button> <!--switch dec>hex / hex>dec-->
-            <form action="">
-                    <input type="number" name="decimalinput" id="dixnumeral">
-                    <button type="submit">Convert</button>
-            </form>
+            <div class="converter">
+                <h2>Dec to hex</h2>
+                <form action="">
+                            
+                    <input type="number" name="decimalinput" id="decimalinput" max="1000000">
+                    <button type="submit" title="convert">🔃</button>
+                </form>
+                <div class="display" id="hex_display">result</div>
 
+            </div>
 
-            <div id="display"></div>
+            <div class="converter">
+                <H2>Hex to dec</H2>
+                <div class="display" id="userInputDisplay"></div>
+                <div class="display" id="dec_display">result</div>
+                <div id="numpad">
+                    <button class="numeral" title="0">ʘ</button>
+                    <button class="numeral" title="1">ר</button>
+                    <button class="numeral" title="2">ᴝ</button>
+                    <button class="numeral" title="3">ᴟ</button>
+                    <button class="numeral" title="4">ʁ</button>
+                    <button class="numeral" title="5">V</button>
+                    <button class="numeral" title="6">И</button>
+                    <button class="numeral" title="7">Ł</button>
+                    <button class="numeral" title="8">Λ</button>
+                    <button class="numeral" title="9">Ψ</button>
+                    <button class="numeral" title="10">X</button>
+                    <button class="numeral" title="11">Б</button>
+                    <button class="numeral" title="12">Ç</button>
+                    <button class="numeral" title="treize">Ð</button>
+                    <button class="numeral" title="catorze">Є</button>
+                    <button class="numeral" title="quinze">Ғ</button>
+                </div>
+            </div>
+            
             
 
 
