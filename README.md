@@ -1,17 +1,19 @@
 # HEX/DEC CONVERTER
 
 This is hex/decimal converter that uses a new hexadecimal representation system.
-___
+
+
 ʘ I Ȥ Ӡ Я V И Ł Λ Ψ X Б Ç Ð Є Ғ
 
 ## Why new hex numerals
 
-The most widely used system uses same numbers that are used for 
-decimal (0 to 9), and letters A, B, C, D, E, and F completing a total of 16 different symbols. 
+The most widely spread system uses same numbers from the 
+decimal we know (0 to 9), and letters A, B, C, D, E, and F completing a total of 16 different symbols. 
 This may be good enough for whatever contexts hexadecimal numerals are used for, 
 but I think a system that differed slightly from the decimal numerals and from latin 
 alphabet would be more appealing and would facilitate an ulterior adoption of the hex numbers.
-___
+
+
 TL;DR: just for fun.
 
 ## Not exactly new
