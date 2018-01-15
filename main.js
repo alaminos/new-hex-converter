@@ -1,11 +1,12 @@
 var converter = {
     dec_hex: function(decimal) {
-        return decimal.toString(16);
-        //this.oldHex_newHex(decimal.toString(16));
+        var hex = decimal.toString(16);
+        this.oldHex_newHex(hex);
     },
 
     hex_dec: function(hex) {
-        return parseInt(hex, 16);
+        var result = parseInt(hex, 16);
+        view.displayDec(result);
     },
 
     oldHex_newHex: function(hex) {
@@ -15,7 +16,8 @@ var converter = {
             var index = this.map[0].indexOf(char);
             result += this.map[1][index];
         }
-        console.log(result);
+        //console.log(result);
+        view.displayHex(result);
     },
 
     newHex_oldHex: function(hex) {
@@ -25,7 +27,8 @@ var converter = {
             var index = this.map[1].indexOf(char);
             result += this.map[0][index];
         }
-        return result;
+        //return result;
+        this.hex_dec(result);
     },
 
     map: [
@@ -39,9 +42,27 @@ var handlers = {
     enterNumber: function(elemClicked) {
         var value = elemClicked.textContent;
         var display = document.getElementById('userInputDisplay');
-        display.textContent += value;
-    }
+        var dec_display = document.getElementById('dec_display');
+        display.value += value;
+        dec_display.innerHTML = "";
 
+    },
+
+    dec_hex: function() {
+        var userInput = document.getElementById('decimalinput').valueAsNumber;
+        if (userInput === undefined ) {
+            view.error();
+        }
+        converter.dec_hex(userInput);
+        return false;
+    },
+
+    hex_dec: function() {
+        var userInput = document.getElementById('userInputDisplay').value;
+        //console.log(userInput);
+        converter.newHex_oldHex(userInput);
+        return false;
+    }
 };
 
 
@@ -53,9 +74,29 @@ var view = {
             if (elemClicked.className = "numeral") {
                 handlers.enterNumber(elemClicked);
             }
-
         }
         )
+    },
+
+    displayHex: function(val) {
+        var display = document.getElementById("hex_display");
+        display.textContent = val;
+    },
+
+    displayDec: function(val) {
+        var display = document.getElementById("dec_display");
+        display.textContent = val;
+    },
+
+    clearDisplay: function() {
+        var display = document.getElementsByClassName("display");
+        var content = display.innerText;
+        console.log(content);
+    },
+
+    error: function() {
+        var display = document.getElementById('hex_display');
+        display.innerText = "Enter a number."
     }
 
 };
