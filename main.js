@@ -33,7 +33,7 @@ var converter = {
 
     map: [
         hex_norm = "0123456789ABCDEF",
-        hex_alt = "ʘרᴝᴟʁVИŁΛΨXБÇÐЄҒ"
+        hex_alt = "ʘIȤӠЯVИŁΛΨXБÇÐЄҒ"
     ]
 };
 
