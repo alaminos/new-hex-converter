@@ -36,14 +36,28 @@ var converter = {
 
 
 var handlers = {
+    enterNumber: function(elemClicked) {
+        var value = elemClicked.textContent;
+        var display = document.getElementById('userInputDisplay');
+        display.textContent += value;
+    }
 
 };
 
 
 var view = {
-    conversionSwitch : function() {
-        //switches hex>dec / dec>hex
-        //displays hex numpad
+    setUpEventListeners: function() {
+        var numpad = document.getElementById("numpad");
+        numpad.addEventListener('click', function(event) {
+            var elemClicked = event.target;
+            if (elemClicked.className = "numeral") {
+                handlers.enterNumber(elemClicked);
+            }
+
+        }
+        )
     }
 
 };
+
+view.setUpEventListeners();
