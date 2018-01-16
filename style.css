@@ -2,32 +2,63 @@ body, html { padding: 0; margin: 0;}
 
 * { text-align: center;}
 
-h1 {
-    font-size: xx-large;
-}
 
-h2 {
+h1 {
     font-size: x-large;
+    background: rgba(172, 170, 170, 0.158);
+    border-bottom: 1px solid yellow;
 }
 
 header {
     font-size: xx-large;
 }
 
-.display {
-    min-width: 100px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: x-large;
-    background-color: rgba(55, 95, 55, 0.959);
+#app {
+    /*background: rgb(218, 236, 177);*/
+    border-radius: 20px;
+    /*border: 1px solid black;*/
+    padding: 10px;
 }
 
+body {
+    background: rgb(102, 79, 79);
+}
+
+.display {
+    min-height: 50px;
+    line-height: 2;
+    font-family: "Courier New", Courier, monospace;
+    font-size: x-large;
+    background-color: rgba(86, 139, 86, 0.39);
+    border-radius: 20px;
+}
+
+.converter {
+    border: 1px solid rgba(0, 0, 0, 0.432);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+form {
+    /*background: rgba(49, 21, 49, 0.205);*/
+    /*border: 5px black solid;*/
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1.2em;
+}
 
 #app {
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 #numpad {
+    margin: 0 auto;
+    max-width: 300px;
     background-color: gray;
     padding: 1em;
     border: 3px black ridge;

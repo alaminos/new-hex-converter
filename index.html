@@ -9,31 +9,23 @@
 </head>
 
 <body>
-    <header>YOUR HEX</header>
+    <!--<header>NEW HEX</header>-->
     
     <main>
-        <H1>Converters</H1>
         <div id="app">
             <div class="converter">
-                <h2>Dec to hex</h2>
+                <h1>dec to hex</h1>
                 <form name="form_dec_hex" onsubmit="return handlers.dec_hex()">
                             
                     <input type="number" name="decimalinput" id="decimalinput" max="1000000">
                     <button type="submit" title="convert">🔃</button>
                 </form>
-                <div class="display" id="hex_display">res</div>
+                <div class="display" id="hex_display"></div>
 
             </div>
 
             <div class="converter">
-                <H2>Hex to dec</H2>
-                <form action="" id="hextodecForm" onsubmit="return handlers.hex_dec()">
-                        <input type="text" class="display" id="userInputDisplay">
-                        <button type="submit" title="convert">🔃</button>
-                        <button type="reset" title="clear" value="Reset">❌</button>
-                </form>
-                
-                <div class="display" id="dec_display">result</div>
+                <H1>hex to dec</H1>
                 <div id="numpad">
                     <button class="numeral" title="0">ʘ</button>
                     <button class="numeral" title="1">I</button>
@@ -52,6 +44,14 @@
                     <button class="numeral" title="14">Є</button>
                     <button class="numeral" title="15">Ғ</button>
                 </div>
+                <form action="" id="hextodecForm" onsubmit="return handlers.hex_dec()">
+                        <input type="text" id="userInputDisplay">
+                        <button type="submit" title="convert">🔃</button>
+                        <button type="reset" title="clear" value="Reset">❌</button>
+                </form>
+                
+                <div class="display" id="dec_display"></div>
+                
             </div>
             
         </div>
