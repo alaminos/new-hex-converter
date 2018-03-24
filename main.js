@@ -1,11 +1,11 @@
 var converter = {
     dec_hex: function(decimal) {
-        var hex = decimal.toString(16);
-        this.oldHex_newHex(hex);
+        var hex = decimal.toString(16); //this is the way to convert to hexadecimal
+        this.oldHex_newHex(hex); //it is sent to be mapped with new hexadecimal symbols
     },
 
     hex_dec: function(hex) {
-        var result = parseInt(hex, 16);
+        var result = parseInt(hex, 16); //converts hexadecimal to decimal
         view.displayDec(result);
     },
 
