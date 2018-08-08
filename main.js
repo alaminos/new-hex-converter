@@ -1,4 +1,10 @@
-var converter = {
+/*MHV model = 3 consts: 
+ * converter, 
+ * handlers, 
+ * view
+ */
+
+const converter = {
     dec_hex: function(decimal) {
         var hex = decimal.toString(16); //this is the way to convert to hexadecimal
         this.oldHex_newHex(hex); //it is sent to be mapped with new hexadecimal symbols
@@ -38,7 +44,7 @@ var converter = {
 };
 
 
-var handlers = {
+const handlers = {
     enterNumber: function(elemClicked) {
         var value = elemClicked.textContent;
         var display = document.getElementById('userInputDisplay');
@@ -66,7 +72,7 @@ var handlers = {
 };
 
 
-var view = {
+const view = {
     setUpEventListeners: function() {
         var numpad = document.getElementById("numpad");
         numpad.addEventListener('click', function(event) {
