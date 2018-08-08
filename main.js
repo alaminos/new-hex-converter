@@ -6,20 +6,20 @@
 
 const converter = {
     dec_hex: function(decimal) {
-        var hex = decimal.toString(16); //this is the way to convert to hexadecimal
+        let hex = decimal.toString(16); //this is the way to convert to hexadecimal
         this.oldHex_newHex(hex); //it is sent to be mapped with new hexadecimal symbols
     },
 
     hex_dec: function(hex) {
-        var result = parseInt(hex, 16); //converts hexadecimal to decimal
+        let result = parseInt(hex, 16); //converts hexadecimal to decimal
         view.displayDec(result);
     },
 
     oldHex_newHex: function(hex) {
         hex = hex.toUpperCase();
-        var result = '';
+        let result = '';
         for (char of hex) {
-            var index = this.map[0].indexOf(char);
+            let index = this.map[0].indexOf(char);
             result += this.map[1][index];
         }
         //console.log(result);
@@ -28,9 +28,9 @@ const converter = {
 
     newHex_oldHex: function(hex) {
         hex = hex.toUpperCase();
-        var result = '';
+        let result = '';
         for (char of hex) {
-            var index = this.map[1].indexOf(char);
+            let index = this.map[1].indexOf(char);
             result += this.map[0][index];
         }
         //return result;
@@ -46,16 +46,16 @@ const converter = {
 
 const handlers = {
     enterNumber: function(elemClicked) {
-        var value = elemClicked.textContent;
-        var display = document.getElementById('userInputDisplay');
-        var dec_display = document.getElementById('dec_display');
+        let value = elemClicked.textContent;
+        let display = document.getElementById('userInputDisplay');
+        let dec_display = document.getElementById('dec_display');
         display.value += value;
         dec_display.innerHTML = "";
 
     },
 
     dec_hex: function() {
-        var userInput = document.getElementById('decimalinput').valueAsNumber;
+        let userInput = document.getElementById('decimalinput').valueAsNumber;
         if (userInput === undefined ) {
             view.error();
         }
@@ -64,7 +64,7 @@ const handlers = {
     },
 
     hex_dec: function() {
-        var userInput = document.getElementById('userInputDisplay').value;
+        let userInput = document.getElementById('userInputDisplay').value;
         //console.log(userInput);
         converter.newHex_oldHex(userInput);
         return false;
@@ -74,9 +74,9 @@ const handlers = {
 
 const view = {
     setUpEventListeners: function() {
-        var numpad = document.getElementById("numpad");
+        let numpad = document.getElementById("numpad");
         numpad.addEventListener('click', function(event) {
-            var elemClicked = event.target;
+            let elemClicked = event.target;
             if (elemClicked.className = "numeral") {
                 handlers.enterNumber(elemClicked);
             }
@@ -85,23 +85,23 @@ const view = {
     },
 
     displayHex: function(val) {
-        var display = document.getElementById("hex_display");
+        let display = document.getElementById("hex_display");
         display.textContent = val;
     },
 
     displayDec: function(val) {
-        var display = document.getElementById("dec_display");
+        let display = document.getElementById("dec_display");
         display.textContent = val;
     },
 
     clearDisplay: function() {
-        var display = document.getElementsByClassName("display");
-        var content = display.innerText;
+        let display = document.getElementsByClassName("display");
+        let content = display.innerText; //what is this for?
         console.log(content);
     },
 
     error: function() {
-        var display = document.getElementById('hex_display');
+        let display = document.getElementById('hex_display');
         display.innerText = "Enter a number."
     }
 
