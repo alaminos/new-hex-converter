@@ -38,8 +38,8 @@ const converter = {
     },
 
     map: [
-        hex_norm = "0123456789ABCDEF",
-        hex_alt = "ʘIȤӠЯVИŁΛΨXБÇÐЄҒ"
+        hex_norm = "0123456789ABCDEF", //conventional hexadecimal numerals
+        hex_alt = "ʘIȤӠЯVИŁΛΨXБÇÐЄҒ" //customized ones
     ]
 };
 
@@ -94,13 +94,13 @@ const view = {
         display.textContent = val;
     },
 
-    clearDisplay: function() {
+    /*clearDisplay: function() {
+        //not needed
         let display = document.getElementsByClassName("display");
-        let content = display.innerText; //what is this for?
-        console.log(content);
-    },
+        
+    },*/
 
-    error: function() {
+    error: function() { //currently not used, should be useful to avoid "NaN" displayed to user
         let display = document.getElementById('hex_display');
         display.innerText = "Enter a number."
     }
